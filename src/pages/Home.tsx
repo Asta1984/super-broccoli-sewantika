@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import Features from '@/components/Features';
 import FAQ from '@/components/Faq';
 import Contact from '@/components/Contact';
+import { SearchBar } from '@/components/Searchbar';
+
 
 export default function Hero() {
   return (
@@ -23,6 +25,7 @@ export default function Hero() {
         </Button>
       </div>
     </section>
+    <SearchBar />
     <Features />
     <FAQ />
     <Contact />

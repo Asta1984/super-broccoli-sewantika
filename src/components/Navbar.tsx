@@ -30,9 +30,9 @@ export default function Navbar() {
           : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-6 py-2 flex justify-between items-center">
-        <Link to="/" className="text-xl font-semibold flex gap-2">
-        <img src="https://pub-d02e3aa7d09f4d5d9261e5d7e4bae228.r2.dev/logo.svg" alt="Logo" className='h-7 w-7'/>
+      <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+        <Link to="/" className="text-3xl font-semibold flex items-center gap-2">
+        <img src="https://pub-d02e3aa7d09f4d5d9261e5d7e4bae228.r2.dev/logo.svg" alt="Logo" className='h-10 w-10'/>
         SEWANTIKA
         </Link>
         <div className="hidden md:flex space-x-10">
@@ -49,7 +49,7 @@ export default function Navbar() {
             Contact
           </Link>
         </div>
-        <Button>Sign Up</Button>
+        <Button>Contact</Button>
       </div>
     </motion.nav>
   );

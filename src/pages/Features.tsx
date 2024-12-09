@@ -2,7 +2,7 @@
 
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Card, CardHeader, CardTitle, CardDescription } from "./ui/card";
+import { Card, CardHeader, CardTitle, CardDescription } from "../components/ui/card";
 
 interface Feature {
   title: string;

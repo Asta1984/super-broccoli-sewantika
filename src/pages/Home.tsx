@@ -1,8 +1,5 @@
 import { Link } from 'react-router-dom'; // Use React Router's Link
 import { Button } from "@/components/ui/button";
-import Features from '@/components/Features';
-import FAQ from '@/components/Faq';
-import Contact from '@/components/Contact';
 import { SearchBar } from '@/components/Searchbar';
 
 
@@ -26,9 +23,6 @@ export default function Hero() {
       </div>
     </section>
     <SearchBar />
-    <Features />
-    <FAQ />
-    <Contact />
   </>
   );
 }

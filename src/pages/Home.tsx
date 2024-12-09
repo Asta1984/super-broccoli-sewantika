@@ -15,10 +15,10 @@ export default function Hero() {
         Our SaaS platform empowers teams to collaborate, innovate, and achieve more. Experience the future of productivity today.
       </p>
       <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-        <Button asChild size="lg">
+        <Button>
           <Link to="/#contact">Get Started</Link>
         </Button>
-        <Button asChild variant="outline" size="lg">
+        <Button variant="outline">
           <Link to="/#features">Learn More</Link>
         </Button>
       </div>

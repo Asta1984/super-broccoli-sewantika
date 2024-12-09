@@ -3,10 +3,13 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from "./ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "../components/ui/sheet";
+import { Menu } from 'lucide-react';
 import { motion } from "framer-motion";
 
 export default function Navbar() {
   const [isSticky, setIsSticky] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -74,10 +77,44 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-        <Button asChild>
-          <Link to="/contact">Contact</Link>
-        </Button>
+        <div className="hidden md:block">
+          <Button asChild>
+            <Link to="/contact">Contact</Link>
+          </Button>
+        </div>
+        <div className="md:hidden">
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Toggle menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <nav className="flex flex-col gap-4">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.to}
+                    to={item.to}
+                    onClick={() => setIsOpen(false)}
+                    className={`text-lg font-medium transition-colors duration-300 ${
+                      item.isActive 
+                        ? 'text-primary font-semibold' 
+                        : 'text-muted-foreground hover:text-primary'
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+                <Button asChild className="mt-4">
+                  <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
+                </Button>
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </motion.nav>
   );
 }
+

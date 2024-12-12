@@ -11,7 +11,7 @@ export default function Hero() {
         Revolutionize Your Workflow
       </h1>
       <p className="text-xl mb-4 max-w-2xl mx-auto text-muted-foreground">
-        Our SaaS platform empowers teams to collaborate, innovate, and achieve more. Experience the future of productivity today.
+      Discover the power of tech with Sewantika. Transform your business through smart innovation.
       </p>
       <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
         <Button>
